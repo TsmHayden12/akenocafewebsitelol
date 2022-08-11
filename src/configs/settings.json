@@ -1,7 +1,0 @@
-{
-  "mongoURL": "mongodb+srv://discordBot:discordBot@akenosserverbot.mbss9zg.mongodb.net/?retryWrites=true&w=majority",
-  "clientID": "1001284214584512584",
-  "token": "MTAwMTI4NDIxNDU4NDUxMjU4NA.GdTF0b.JyiM9jE_LYjk4M3HQUIX-X6uy1Pba5Ezyx970w",
-  "secret": "Flh_J8B27giqZIvSatG3XeLaqbYhQfdx",
-  "callbackURL": "http://localhost:4000/callback"
-}
