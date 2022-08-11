@@ -1,0 +1,78 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:site_name" content="The Best Cafe Discord Server Out There!"/>
+<meta property="og:image" content="<%= icon %>"/>
+<meta name="theme-color" content="#07233B"/>
+<title>Akeno's Café :: Home</title>
+<meta name="description" content="A Discord Server that is dedicated to Anime / Tech / Programming." />
+<meta property="og:type" content="website" />
+<meta property="twitter:type" content="website" />
+<meta property="og:url" content="https://cafe.akenodev.tk" />
+<meta property="twitter:url" content="https://cafe.akenodev.tk" />
+<meta property="og:title" content="The Best Cafe Discord Server Out There!" />
+<meta property="twitter:title" content="The Best Cafe Discord Server Out There!" />
+<meta property="og:description" content="A Discord Server that is dedicated to Anime / Tech / Programming." />
+<meta property="twitter:description" content="A Discord Server that is dedicated to Anime / Tech / Programming." />
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/986783481646436382/1006732463042728026/akenosCafe.png" />
+<meta property="twitter:image" content="https://cdn.discordapp.com/attachments/986783481646436382/1006732463042728026/akenosCafe.png" />
+<link rel="icon" href="<%= icon %>" type="image/x-icon" />
+<link rel="stylesheet" href="/index.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+<nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top" id="mainNav">
+  <a class="navbar-brand" style="margin-left: 10px;" href="/"><img src="<%= icon %>" style="border-radius: 100%" width="30" height="30">
+    
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle">Codes</a>
+        <div class="dropdown-menu bg-transparent">
+          <a class="dropdown-item" href="/normal">Normal Codes</a>
+          <a class="dropdown-item" href="/gold">Gold Codes</a>
+          <a class="dropdown-item" href="/diamond">Diamond Codes</a>
+          <a class="dropdown-item" href="/ready">Ready Systems</a>
+          <div class="dropdown-divider" style="border-top:1px solid #20262c"></div>
+            <a class="dropdown-item" href="/fromyou">Coming from you</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/discord">Discord</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/information">Information</a>
+      </li>
+    </ul>
+
+    <% if (user) { %>
+    <ul class="navbar-nav" style="margin-right: 20px;">
+      <% if (reqMember && reqMember.hasPermission(8)) { %>
+      <li class="nav-item">
+      <a class="nav-link" href="/admin">Admin Panel</a>
+      </li>
+      <% } %>
+      <li class="nav-item">
+      <a class="nav-link" href="/share">Share Code</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"><%= user.username %></a>
+        <div class="dropdown-menu bg-transparent dropdown-menu-right">
+         <a class="dropdown-item" href="/profile/<%= user.id %>">Profile</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/logout">Logut</a>
+        </div>
+      </li>
+    </ul>
+
+    <% } else { %>
+      <a class="button1" style="margin-right: 20px; filter: invert(1);" href="/login">Login</a>
+    <% } %>
+  </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
